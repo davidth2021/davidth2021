@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World clock</title>
+     <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="topofda">
+        <h1 class="pageTitle">WORLD CLOCK TIME ZONES </h1>
+    </div>
+   
+
+    <div class="timebox">
+        <h1>Colombia</h1>
+        <p id="colombiaTime"></p>
+     </div>
+
+   <div class="timebox">
+      <h1>London</h1>
+      <p id="londonTime"></p>
+   </div>
+
+   <div class="timebox">
+      <h1>India</h1>
+      <p id="indiaTime"></p>
+   </div>
+
+   <div class="timebox">
+      <h1>Australia</h1>
+      <p id="australiaTime"></p>
+   </div>
+
+   <div class="timebox">
+      <h1>Germany</h1>
+      <p id="germanyTime"></p>
+   </div>
+
+   <div class="timebox">
+      <h1>New York</h1>
+      <p id="newyorkTime"></p>
+   </div>
+
+
+<SCript>
+
+var getColombiaTime = function () {
+    document.getElementById("colombiaTime").innerHTML = new Date().toLocaleString("en-US",{timeZone:'America/Bogota',timeStyle:'full',hourCycle:'h24'});
+   }
+   getColombiaTime();
+   setInterval(getColombiaTime, 1000);
+
+var getIndiaTime = function () {
+    document.getElementById("indiaTime").innerHTML = new Date().toLocaleString("en-US",{timeZone:'Asia/Kolkata',timeStyle:'full',hourCycle:'h24'});
+   }
+   getIndiaTime();
+   setInterval(getIndiaTime, 1000);
+
+var getLondonTime = function () {
+    document.getElementById("londonTime").innerHTML = new Date().toLocaleString("en-US",{timeZone:'Europe/London',timeStyle:'full',hourCycle:'h24'});
+   }
+   getLondonTime();
+   setInterval(getLondonTime, 1000);
+
+var getAustraliaTime = function () {
+    document.getElementById("australiaTime").innerHTML = new Date().toLocaleString("en-US",{timeZone:'Australia/Sydney',timeStyle:'full',hourCycle:'h24'});
+   }
+   getAustraliaTime();
+   setInterval(getAustraliaTime, 1000);
+
+
+var getGermanyTime = function () {
+    document.getElementById("germanyTime").innerHTML = new Date().toLocaleString("en-US",{timeZone:'Europe/Berlin',timeStyle:'full',hourCycle:'h24'});
+   }
+   getGermanyTime();
+   setInterval(getGermanyTime, 1000);
+
+var getNewyorkTime = function () {
+    document.getElementById("newyorkTime").innerHTML = new Date().toLocaleString("en-US",{timeZone:'America/New_york',timeStyle:'full',hourCycle:'h24'});
+   }
+   getNewyorkTime();
+   setInterval(getNewyorkTime, 1000);
+
+
+</SCript>
+
+    
+</body>
+</html>
